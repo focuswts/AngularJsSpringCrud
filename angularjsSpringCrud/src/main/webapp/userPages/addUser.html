@@ -1,0 +1,26 @@
+<div ng-controller="userController" ng-init="user = {}">
+
+<h2></h2>
+
+<form name="userForm">
+
+<label>Nome</label>
+<input type="text" ng-model="user.name"/>
+<br>
+<label>Senha</label>
+<input type="password" ng-model="user.password"/>
+<br>
+<label>Email</label>
+<input type="email" ng-model="user.email"/>
+<br>
+<input type="submit" ng-click="addUser()" value="Adicionar Usuário">
+
+</form>
+
+
+
+
+
+
+
+</div>

@@ -14,23 +14,19 @@
 <body ng-app="firstApp">
 	<h1>AngularJS SPA CRUD</h1>
 	<div>
-		<a ui-sref="home">Index</a> <a ui-sref="listUsers">List Users</a>
-
+		<a ui-sref="home">Index</a> 
+		<a ui-sref="listUsers">List Users</a>
+		<a ui-sref="addUser">Add User</a>
 	</div>
 
 	<ui-view></ui-view>
 
 
-	<script th:src="@{/js/angular.js}"></script>
+	<script th:src="@{js/angular.js}"></script>
 
-	<script type="text/javascript" src="../js/app.js"
-		th:src="@{/js/app.js}"></script>
-	<script type="text/javascript" src="../js/LinkController.js"
-		th:src="@{/js/LinkController.js}"></script>
-	<script type="text/javascript" src="../js/LinkService.js"
-		th:src="@{/js/LinkService.js}"></script>
-	<script type="text/javascript"
-		src="http://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+	<script type="text/javascript" src="js/app.js" th:src="@{js/app.js}"></script>
+
+	<script type="text/javascript" th:src="@{js/angular-ui-router.js}"></script>
 
 	<script src="controllersJS/userController.js"></script>
 </body>

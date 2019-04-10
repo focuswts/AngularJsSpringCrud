@@ -1,8 +1,33 @@
-<div>
-	<p>Teste</p>
+<div ng-controller="userController" ng-init="getUsers()">
+	<h2>Listagem De Usuários</h2>
 
-	<div ng-repeat="pessoa in pessoas">
-		<span>{{pessoa.nome}}</span> <span>{{pessoa.idade}}</span>
+	<div>
+
+		<table border="1">
+			<tr>
+				<th>ID</th>
+				<th>Nome</th>
+				<th>Senha</th>
+				<th>Email</th>
+				<th>Actions</th>
+			</tr>
+
+			<tr ng-repeat="user in users" >
+				<td>{{user.id}}</td>
+				<td>{{user.name}}</td>
+				<td>{{user.password}}</td>
+				<td>{{user.email}}</td>
+				<td>
+					<input type="button" ng-click="deleteUser(user.id)" value="Excluir"/>
+				</td>
+				<td>
+					<input type="button" ng-click="updateUserRedirect(user)" value="Editar"/>
+				</td>
+			</tr>
+
+		</table>
+
+
 	</div>
 
 
