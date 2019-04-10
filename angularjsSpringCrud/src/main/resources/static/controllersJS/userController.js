@@ -1,7 +1,17 @@
-app.controller("userController", function($scope,$http,$location,$state,$stateParams) {
+app.controller("userController",function($scope,$http,$location,$state,$stateParams,fileUpload) {
 
 	$scope.users;
  
+	
+	$scope.uploadFile = function(usersCSV){
+	      var file = $scope.fileCSV;
+          console.log('file is ' );
+          console.dir(file);
+          var uploadUrl = "/api/user/addUsersCSV";
+          fileUpload.uploadFileToUrl(file, uploadUrl);
+	}
+	
+	
 	
 	$scope.getUsers = function() {
 		$http.get("/api/user/list").then(function(response) {

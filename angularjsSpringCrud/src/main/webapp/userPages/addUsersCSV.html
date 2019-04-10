@@ -1,0 +1,36 @@
+<div ng-controller="userController" ng-init="getUsers()">
+	<h2>Leitor De CSV Usuários</h2>
+	<div>
+		<input type="file" file-model="fileCSV" required accept=".csv">
+		<button ng-click="uploadFile()"/>Upload</button>
+	</div>
+
+
+	<div>
+
+		<table border="1">
+			<tr>
+				<th>ID</th>
+				<th>Nome</th>
+				<th>Senha</th>
+				<th>Email</th>
+				<th>Actions</th>
+			</tr>
+
+			<tr ng-repeat="user in users">
+				<td>{{user.id}}</td>
+				<td>{{user.name}}</td>
+				<td>{{user.password}}</td>
+				<td>{{user.email}}</td>
+				<td><input type="button" ng-click="deleteUser(user.id)"
+					value="Excluir" /> <input type="button"
+					ng-click="updateUserRedirect(user)" value="Editar" /></td>
+			</tr>
+
+		</table>
+
+
+	</div>
+
+
+</div>
